@@ -99,6 +99,8 @@ if __name__ == '__main__':
             else:
                 print('Please check the input given or type help() to check commands ')
     except:
+        print("Satellite Didn't connect")
+        print('Error : System Failure or Network Failure')
         print('Satellite status : Offline')
     finally:
         print('Disconnected from Satellite \nSatellite status :Offline ')
