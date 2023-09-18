@@ -51,7 +51,7 @@ if __name__ == '__main__':
                     s.rotate(direction)
                     print(f'Orientation: "{s.orientation}"')
                 else:
-                    print('Invalid direction given (North , South , East , West)')
+                    print('Invalid direction given, Directions ->(North , South , East , West)')
 
             if function == 'activatePanels':
                 s.activatePanels()
@@ -64,7 +64,10 @@ if __name__ == '__main__':
             if function == 'collectData':
                 try:
                     s.collectData()
-                    print(f'Data Collected: {s.DataCollected}')
+                    if s.panels_status == True:
+                        print(f'Data Collected: {s.DataCollected}')
+                    else:
+                        print('f Data Not collected , Please activate Panels')
                 except:
                     print('Unable to collect Data')
 
@@ -86,4 +89,4 @@ if __name__ == '__main__':
                       f'| To get status  | status()                               |\n'
                       f'*---------------------------------------------------------*\n')
         else :
-            print('Please check the input given')
+            print('Please check the input given or type help() to check commands ')
