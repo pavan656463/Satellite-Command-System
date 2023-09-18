@@ -10,17 +10,18 @@ class Satellite:
 
     def activatePanels(self):
         self.panels_status = True
-        self.panels ='Active'
+        self.panels = 'Active'
 
     def deactivatePanels(self):
         self.panels_status = False
         self.panels = 'Unactive'
+
     def collectData(self):
         if self.panels_status == True:
             self.DataCollected += 10
 
     def get_status(self):
-        return [self.orientation , self.panels , self.DataCollected]
+        return [self.orientation, self.panels, self.DataCollected]
 
 
 if __name__ == '__main__':
@@ -35,18 +36,21 @@ if __name__ == '__main__':
         ex : rotate(North) or rotate(South) 
         """
         command = input(str()).strip()
-        if command == '0' :
+        if command == '0':
             break
-        left  = command.find('(')
+        left = command.find('(')
         right = command.find(')')
 
         if left != -1 and right != -1:
             function = command[:left]
-            direction= command[left + 1:right]
+            direction = command[left + 1:right]
 
-        commands = ['rotate' , 'activatePanels','deactivatePanels' , 'collectData' , 'help','status']
+        commands = ['rotate', 'activatePanels', 'deactivatePanels', 'collectData', 'help', 'status', 'exit']
 
         if function in commands:
+            if function == 'exit':
+                break
+
             if function == 'rotate':
                 directions = ['North', 'South', 'East', 'West']
                 if direction in directions:
@@ -89,6 +93,7 @@ if __name__ == '__main__':
                       f'| Solar panels   | activatePanels() or deactivatePanels() |\n'
                       f'| To collect Data| collectData()                          |\n'
                       f'| To get status  | status()                               |\n'
+                      f'| To exit        | 0 or exit()                            |\n'
                       f'*---------------------------------------------------------*\n')
-        else :
+        else:
             print('Please check the input given or type help() to check commands ')
