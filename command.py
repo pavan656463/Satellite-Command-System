@@ -36,7 +36,7 @@ if __name__ == '__main__':
             getting input from user 
             ex : rotate(North) or rotate(South) 
             """
-            command = input(str()).strip()
+            command = input(str('>>')).strip()
             if command == '0':
                 break
             left = command.find('(')
