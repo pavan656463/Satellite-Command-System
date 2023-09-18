@@ -65,7 +65,7 @@ if __name__ == '__main__':
                     print(f'Solar Panels: "Active"')
 
                 if function == 'deactivatePanels':
-                    s.activatePanels()
+                    s.deactivatePanels()
                     print(f'Solar Panels: "Unactive"')
 
                 if function == 'collectData':
