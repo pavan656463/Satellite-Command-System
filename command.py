@@ -25,6 +25,8 @@ class Satellite:
 
 if __name__ == '__main__':
     s = Satellite()
+    print('Satellite status : Online')
+    print('Enter the commands \n ')
     while True:
         function = None
         direction = None
@@ -67,7 +69,7 @@ if __name__ == '__main__':
                     if s.panels_status == True:
                         print(f'Data Collected: {s.DataCollected}')
                     else:
-                        print('f Data Not collected , Please activate Panels')
+                        print('Data Not collected , Please activate Panels')
                 except:
                     print('Unable to collect Data')
 
