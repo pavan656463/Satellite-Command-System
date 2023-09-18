@@ -30,19 +30,9 @@ class Satellite:
         if self.panels == True:
             self.DataCollected += 10
 
-    def get_status(self):
-        print(f"Orientation : {self.orientation}")
-        if self.panels == True :
-            print(f"Solar Panels : Active")
-        else :
-            print(f"Solar Panels : Inactive")
-        print(f"Data Collected : {self.DataCollected} ")
 
 if __name__ == '__main__':
-    s1 = Satellite()
-    s1.rotate('South')
-    s1.activatePanels()
-    s1.collectData()
-    s1.get_status()
-    s1.rotate('East')
-    s1.get_status()
+    s = Satellite()
+    while True:
+        command = input(str())
+        print(command)
