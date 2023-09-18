@@ -1,20 +1,22 @@
 class Satellite:
     def __init__(self):
         self.orientation = 'North'
-        self.panels = False
+        self.panels_status = False
+        self.panels = 'Unactive'
         self.DataCollected = 0
 
     def rotate(self, direction):
         self.orientation = direction
 
     def activatePanels(self):
-        self.panels = True
+        self.panels_status = True
+        self.panels ='Active'
 
     def deactivatePanels(self):
-        self.panels = False
-
+        self.panels_status = False
+        self.panels = 'Unactive'
     def collectData(self):
-        if self.panels == True:
+        if self.panels_status == True:
             self.DataCollected += 10
 
     def get_status(self):
@@ -56,8 +58,15 @@ if __name__ == '__main__':
             print(f'Solar Panels: "Unactive"')
 
         if function == 'collectData':
-            s.collectData()
-            print(f'Data Collected: {s.DataCollected}')
+            try:
+                s.collectData()
+                print(f'Data Collected: {s.DataCollected}')
+            except:
+                print('Unable to collect Data')
 
         if function == 'getStatus' or command =='':
-            print(f'{s.get_status()}')
+            status = s.get_status()
+
+            print(f'Orientation : "{status[0]}"\n'
+                  f'Solar Panels: "{status[1]}"\n'
+                  f'Data Collected:{status[2]}\n')
