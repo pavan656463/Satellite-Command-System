@@ -86,7 +86,7 @@ if __name__ == '__main__':
                           f'Data Collected:{status[2]}')
 
                 if function == 'help':
-                    print(f'-------------------satellite commands----------------------\n'
+                    print(f'                   satellite commands                      \n'
                           f'*---------------------------------------------------------*\n'
                           f'| Functions      | commands                               |\n'
                           f'|---------------------------------------------------------|\n'
