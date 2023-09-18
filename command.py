@@ -32,7 +32,7 @@ if __name__ == '__main__':
         getting input from user 
         ex : rotate(North) or rotate(South) 
         """
-        command = input(str())
+        command = input(str()).strip()
         if command == '0' :
             break
         left  = command.find('(')
@@ -47,7 +47,9 @@ if __name__ == '__main__':
             directions = ['North', 'South', 'East', 'West']
             if direction in directions:
                 s.rotate(direction)
-            print(f'Orientation: "{s.orientation}"')
+                print(f'Orientation: "{s.orientation}"')
+            else:
+                print('Invalid direction given (North , South , East , West)')
 
         if function == 'activatePanels':
             s.activatePanels()
@@ -69,4 +71,7 @@ if __name__ == '__main__':
 
             print(f'Orientation : "{status[0]}"\n'
                   f'Solar Panels: "{status[1]}"\n'
-                  f'Data Collected:{status[2]}\n')
+                  f'Data Collected:{status[2]}')
+
+        else:
+            print('Please check the input given')
