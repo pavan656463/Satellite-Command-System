@@ -40,3 +40,9 @@ class Satellite:
 
 if __name__ == '__main__':
     s1 = Satellite()
+    s1.rotate('South')
+    s1.activatePanels()
+    s1.collectData()
+    s1.get_status()
+    s1.rotate('East')
+    s1.get_status()
