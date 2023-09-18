@@ -28,7 +28,7 @@ if __name__ == '__main__':
     try:
         s = Satellite()
         print('Satellite status : Online')
-        print('Enter the commands \n  or type help() to get commands')
+        print('Enter the commands or type help() to get commands')
         while True:
             function = None
             direction = None
