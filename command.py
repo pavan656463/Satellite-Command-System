@@ -42,9 +42,9 @@ if __name__ == '__main__':
             function = command[:left]
             direction= command[left + 1:right]
 
-        commands = ['rotate' , 'activatePanels','deactivatePanels' , 'collectData' , 'help']
+        commands = ['rotate' , 'activatePanels','deactivatePanels' , 'collectData' , 'help','']
 
-        if function not in commands:
+        if function  in commands:
             if function == 'rotate':
                 directions = ['North', 'South', 'East', 'West']
                 if direction in directions:
@@ -83,6 +83,7 @@ if __name__ == '__main__':
                       f'| Rotation       | rotate(Direction)                      |\n'
                       f'| Solar panels   | activatePanels() or deactivatePanels() |\n'
                       f'| To collect Data| collectData()                          |\n'
+                      f'| To get status  | Press Enter                            |\n'
                       f'*---------------------------------------------------------*\n')
         else :
             print('Please check the input given')
