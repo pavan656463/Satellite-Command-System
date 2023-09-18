@@ -89,7 +89,7 @@ if __name__ == '__main__':
                     print(f'                   satellite commands                      \n'
                           f'*---------------------------------------------------------*\n'
                           f'| Functions      | commands                               |\n'
-                          f'|---------------------------------------------------------|\n'
+                          f'|----------------|----------------------------------------|\n'
                           f'| Rotation       | rotate(Direction)                      |\n'
                           f'| Solar panels   | activatePanels() or deactivatePanels() |\n'
                           f'| To collect Data| collectData()                          |\n'
