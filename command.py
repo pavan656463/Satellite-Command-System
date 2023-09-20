@@ -73,7 +73,7 @@ if __name__ == '__main__':
                     try:
                         s.collectData()
                         if s.panels_status:
-                            print(f'Data Collected: {s.DataCollected}')
+                            print(f'Data Collected(Units): {s.DataCollected}')
                         else:
                             print('Data Not collected , Please activate Solar Panels')
                     except:
