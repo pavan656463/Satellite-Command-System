@@ -1,4 +1,5 @@
 class Satellite:
+    # Initial State of satellite
     def __init__(self):
         self.orientation = 'North'
         self.panels_status = False
@@ -6,6 +7,7 @@ class Satellite:
         self.DataCollected = 0
 
     def rotate(self, direction):
+
         self.orientation = direction
 
     def activatePanels(self):
