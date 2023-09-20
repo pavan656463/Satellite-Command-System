@@ -73,7 +73,7 @@ if __name__ == '__main__':
                     try:
                         s.collectData()
                         if s.panels_status:
-                            print(f'Data Collected(Units): {s.DataCollected}')
+                            print(f'Data Collected: {s.DataCollected} (Units)')
                         else:
                             print('Data Not collected , Please activate Solar Panels')
                     except:
@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
                     print(f'Orientation : "{status[0]}"\n'
                           f'Solar Panels: "{status[1]}"\n'
-                          f'Data Collected:{status[2]}')
+                          f'Data Collected:{status[2]} (Units)')
 
                 if function == 'help':
                     print(f'                   Satellite Commands                      \n'
