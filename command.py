@@ -7,7 +7,6 @@ class Satellite:
         self.DataCollected = 0
 
     def rotate(self, direction):
-
         self.orientation = direction
 
     def activatePanels(self):
@@ -73,7 +72,7 @@ if __name__ == '__main__':
                 if function == 'collectData':
                     try:
                         s.collectData()
-                        if s.panels_status == True:
+                        if s.panels_status:
                             print(f'Data Collected: {s.DataCollected}')
                         else:
                             print('Data Not collected , Please activate Solar Panels')
