@@ -59,7 +59,7 @@ if __name__ == '__main__':
                         s.rotate(direction)
                         print(f'Orientation: "{s.orientation}"')
                     else:
-                        print('Invalid direction given, Directions ->(North , South , East , West)')
+                        print('Invalid direction given, Directions ->(North , South , East , West) , Ex : rotate(North)')
 
                 if function == 'activatePanels':
                     s.activatePanels()
@@ -98,7 +98,7 @@ if __name__ == '__main__':
                           f'| To exit        | 0 or exit()                            |\n'
                           f'*---------------------------------------------------------*\n')
             else:
-                print('Please check the input given or type help() to check commands ')
+                print('Please check the given input or type help() to check commands ')
     except:
         print("Satellite Didn't connect")
         print('Error : System Failure or Network Failure')
