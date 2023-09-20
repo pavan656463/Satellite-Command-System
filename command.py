@@ -74,7 +74,7 @@ if __name__ == '__main__':
                         if s.panels_status == True:
                             print(f'Data Collected: {s.DataCollected}')
                         else:
-                            print('Data Not collected , Please activate Panels')
+                            print('Data Not collected , Please activate Solar Panels')
                     except:
                         print('Unable to collect Data')
 
