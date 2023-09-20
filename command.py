@@ -27,7 +27,7 @@ class Satellite:
 if __name__ == '__main__':
     try:
         s = Satellite()
-        print('Satellite status : Online')
+        print('Satellite state : Online')
         print('Enter the commands or type help() to get commands or type 0 to exit')
         while True:
             function = None
@@ -101,6 +101,5 @@ if __name__ == '__main__':
     except:
         print("Satellite Didn't connect")
         print('Error : System Failure or Network Failure')
-        print('Satellite status : Offline')
     finally:
-        print('Disconnected from Satellite \nSatellite status :Offline ')
+        print('Disconnected from Satellite \nSatellite state :Offline ')
